@@ -19,3 +19,5 @@ These are the features:
 -  sending emails to users and support team with Play Mailer
 
 You need to create the database tables and add the required variables mentioned in application.conf to the environment to make it run. This includes the support's email login information, the Play's application secret, and database connection parameters.
+
+Feel free to open an issue about any problems you encounter with running the project, or to suggest changes.
