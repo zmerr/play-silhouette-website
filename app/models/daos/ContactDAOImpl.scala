@@ -18,7 +18,6 @@ class ContactDAOImpl @Inject() (db: Database)(implicit executionContext: Databas
   //  implicit val dbBlockingExecutionConext: ExecutionContext = system.dispatchers.lookup(DispatcherSelector.fromConfig("my-DB-dispatcher"))
 
   /**
-   * Finds a user by its login info.
    *
    * @param email The email info of the contactTicket to find.
    * @return The found user or None if no user for the given login info could be found.
@@ -26,7 +25,6 @@ class ContactDAOImpl @Inject() (db: Database)(implicit executionContext: Databas
   def find(email: String): Future[Option[ContactTicket]] = ???
 
   /**
-   * Finds a user by its user ID.
    *
    * @param email The ID of the contactTickets to find.
    * @return The found contactTickets or None if no user for the given ID could be found.
@@ -34,7 +32,6 @@ class ContactDAOImpl @Inject() (db: Database)(implicit executionContext: Databas
   def getALL(email: String): Future[Option[Seq[ContactTicket]]] = ???
 
   /**
-   * Saves a user.
    *
    * @param contactTicket The contactTicket to save.
    * @return The saved contactTicket.
