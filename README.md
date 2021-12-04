@@ -2,6 +2,8 @@ A Play Silhouette sample template built with the Silhouette Seed template origin
 
 For further information about this project including accessing the tutorial please visit the original template above.
 
+Some functionality from the original seed template is missing or altered. That includes the addition of the persistence of Auth Tokens, as well as removing the support of TOTP. 
+
 This app uses the honeycomb-cheesecake version of Play Silhoutte https://github.com/honeycomb-cheesecake/play-silhouette.
 
 The website doesn't have any content. For adding them, for adding them, you can either edit the Twirl files or use an integration of Play with frameworks such as React or Vue:
