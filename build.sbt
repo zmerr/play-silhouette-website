@@ -50,7 +50,6 @@ libraryDependencies ++= Seq(
   filters
 )
 
-//libraryDependencySchemes += "org.scala-lang.modules" %% "scala-java8-compat" % "always"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
