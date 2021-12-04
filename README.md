@@ -4,7 +4,11 @@ For further information about this project including accessing the tutorial plea
 
 This app uses the honeycomb-cheesecake version of Play Silhoutte https://github.com/honeycomb-cheesecake/play-silhouette.
 
-The website doesn't have any content. For adding them, for adding them, you can either edit the Twirl files or use an integration of Play with frameworks such as (React)[https://medium.com/@yohan.gz/react-with-play-framework-2-6-x-a6e15c0b7bd] or (Vue)[https://github.com/gbogard/play-vue-webpack].
+The website doesn't have any content. For adding them, for adding them, you can either edit the Twirl files or use an integration of Play with frameworks such as React or Vue:
+
+https://github.com/gbogard/play-vue-webpack
+
+https://medium.com/@yohan.gz/react-with-play-framework-2-6-x-a6e15c0b7bd
 
 These are the features:
 
