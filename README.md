@@ -1,4 +1,4 @@
-A Play Silhouette sample website built with the Silhouette Seed template originally found here https://github.com/mohiva/play-silhouette-seed
+A Play Silhouette sample template built with the Silhouette Seed template originally found here https://github.com/mohiva/play-silhouette-seed
 
 For further information about this project including accessing the tutorial please visit the original template above.
 
