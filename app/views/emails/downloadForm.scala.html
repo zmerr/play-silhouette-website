@@ -1,0 +1,11 @@
+@import play.api.i18n.Messages
+@import play.twirl.api.Html
+
+@(downloadNotification: models.DownloadNotification)(implicit messages: Messages)
+
+<html>
+<body>
+<p>@messages("email.download.hello", downloadNotification.firstName.get)</p>
+<p>@Html(messages("email.download.html.text"))</p>
+</body>
+</html>

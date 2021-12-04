@@ -1,0 +1,200 @@
+
+error.email = Valid email required
+error.required = This field is required
+invalid.credentials = Invalid credentials!
+invalid.unexpected.totp = Unexpected TOTP exception!
+invalid.verification.code = Invalid verification code!
+invalid.recovery.code = Invalid recovery code!
+access.denied = Access denied!
+could.not.authenticate = Could not authenticate with social provider! Please try again!
+contact.message = message
+support.message = message
+download.message = message
+
+contact = Contact
+support = Support
+download = Download
+
+
+contact.ticket.received = Your contact ticket was successfully received.
+support.ticket.received = Your support ticket was successfully received.
+download.notification.received = Thank you for trying our product.
+download.over.maximum.trial = You have reached the limit for the maximum trials of downloads. Please contact the support for solving the issue.
+download.thank.you = Thank you for trying our product.
+
+role.title = Job Title
+
+
+
+
+home.title = Your Company - Home
+sign.up.title = Your Company - Sign Up
+sign.in.title = Your Company - Sign In
+totp.title = Your Company - TOTP
+forgot.password.title = Your Company - Forgot Password
+reset.password.title = Your Company - Reset Password
+change.password.title = Your Company - Change Password
+activate.account.title = Your Company - Activate Account
+support.title = Your Company - Support
+contact.title = Your Company - Contact
+download.title = Your Company - Download
+
+
+toggle.navigation = Toggle navigation
+welcome.signed.in = Welcome, you are now signed in!
+
+totp.enable = Enable two-factor authentication
+totp.disable = Disable two-factor authentication
+totp.enabling.title = 2 factor auth enabling
+totp.disabled.title = 2 factor auth is not enabled
+totp.enabled.title = 2 factor auth is enabled
+totp.shared.key.title = Shared key:
+totp.recovery.tokens.title = Recovery tokens:
+totp.enabling.info = 2 factor auth enabled successfully!
+totp.disabling.info = 2 factor auth disabled successfully!
+totp.recovery.code = Recovery code
+totp.verification.code = Verification Code
+totp.verify = Verify
+totp.open.the.app.for.2fa = Open the two-factor authentication app on your device to view your authentication code and verify your identity.
+totp.dont.have.your.phone = Don't have your phone?
+totp.use.recovery.code = Enter a two-factor recovery code
+totp.lost.your.recovery.codes = Lost your recovery codes?
+totp.contact.support = Contact support
+totp.support.support = Support
+totp.download.support = Download
+
+
+sign.up.account = Sign up for a new account
+sign.in.credentials = Sign in with your credentials
+sign.in.totp = Two-factor authentication
+sign.in.totp.recovery = Two-factor authentication using recovery code
+
+error = Error!
+info = Info!
+success = Success!
+home = Home
+first.name = First name
+last.name = Last name
+full.name = Full name
+contact.organization = organization
+contact.subject = Subject
+contact.email = Reply Email
+support.organization = organization
+support.subject = subject
+download.organization = organization
+
+email = Email
+password = Password
+send = Send
+change = Change
+reset = Reset
+sign.up = Sign up
+sign.in = Sign in
+sign.out = Sign out
+sign.in.now = Sign in now
+sign.up.now = Sign up now
+already.a.member = Already a member?
+not.a.member = Not a member?
+forgot.your.password = Forgot your password?
+forgot.password = Forgot password
+reset.password = Reset password
+change.password = Change password
+activate.account = Activate Account
+current.password = Current password
+new.password = New password
+
+remember.me = Remember my login on this computer
+or.use.social = Or use your existing account on one of the following services to sign in:
+forgot.password.info = Please enter your email address and we will send you an email with further instructions to reset your password.
+strong.password.info = Strong passwords include numbers, letters and punctuation marks.
+current.password.invalid = The entered password is invalid. Please enter the correct password!
+activate.account.text1 = You can''t log in yet. We previously sent an activation email to you at:
+activate.account.text2 = Please follow the instructions in that email to activate your account.
+activate.account.text3 = Click <a href="{0}">here</a> to send the activation email again.
+
+sign.up.email.sent = We sent an activation mail to {0}@{1} Please follow the instructions in the email to activate your account. If it does not arrive, check your spam folder, or try to log in again to send another activation mail.
+activation.email.sent = We sent another activation email to you at {0}@{1} It might take a few minutes for it to arrive; be sure to check your spam folder.
+reset.email.sent = We have sent you an email with further instructions to reset your password, on condition that the address was found in our system. If you do not receive an email within the next 5 minutes, then please recheck your entered email address and try it again.
+
+invalid.activation.link = The link is not valid anymore! Please sign in to send the activation email again.
+invalid.reset.link = The link is not valid anymore! Please request a new link to reset your password.
+
+password.reset = We have reset your password. You can now sign in with your credentials.
+account.activated = Your account is now activated! Please sign in to use your new account.
+password.changed = Your password has been changed.
+
+google = Google
+facebook = Facebook
+twitter = Twitter
+vk = VK
+xing = Xing
+yahoo = Yahoo
+
+##########
+# Emails
+##########
+
+email.from = Your Company Support<support@Your Company.com>
+email.signature = Your Company Support
+
+#Sign Up Notify
+
+email.signup.notify.from = New signup: {0} {1}, {2} at {3}
+email.signup.notify.email = {0}
+
+# Sign Up
+email.sign.up.subject = verify your email at Your Company
+email.sign.up.hello = Hello {0},
+email.sign.up.html.text = Please follow <a href="{0}">this link</a> to confirm and activate your new account.
+email.sign.up.txt.text = Please follow the link to confirm and activate your new account: {0}
+
+# Support Support
+email.support.support.from = Support ticket left at website from: {0} {1}, {2} at {3}
+email.support.support.email = email: {0}
+
+
+
+
+# Support Contact
+email.support.contact.from = message left at website from: {0} {1}, {2} at {3}
+email.support.contact.email = email: {0}
+
+
+#Contact
+email.contact.subject = {0}
+email.contact.hello = Hello {0},
+email.contact.html.text = We received the message you left for Your Company. We would try to get back to you within one work day. Here is a copy of your message:
+email.contact.txt.text = We received the message you left for Your Company. We would try to get back to you within one work day. Here is a copy of your message:
+email.contact.message = {0}
+
+#Support
+email.support.subject = {0}
+email.support.hello = Hello {0},
+email.support.html.text = We received the support ticket you left for Your Company. We would try to get back to you within one work day. Here is a copy of your message:
+email.support.txt.text = We received the support ticket you left for Your Company. We would try to get back to you within one work day. Here is a copy of your message:
+email.support.message = {0}
+
+#Download
+email.download.subject = Your Company Product Download
+email.download.hello = Hello {0},
+email.download.html.text = You downloaded a copy of Your Company's SBML Editor. Thank you very much for your interest.
+email.download.txt.text = You downloaded a copy of Your Company's SBML Editor. Thank you very much for your interest.
+
+
+# Already Signed Up
+email.already.signed.up.subject = Your Company Signup
+email.already.signed.up.hello = Hello {0},
+email.already.signed.up.html.text = You already have an account registered. Please follow <a href="{0}">this link</a> to sign in into your account.
+email.already.signed.up.txt.text = You already have an account registered. Please follow the link to sign in into your account: {0}
+
+# Reset Password
+email.reset.password.subject = Reset your Your Company password
+email.reset.password.hello = Hello {0},
+email.reset.password.html.text = Please follow <a href="{0}">this link</a> to reset your password.
+email.reset.password.txt.text = Please follow the link to reset your password: {0}
+
+# Activate Account
+email.activate.account.subject = Activate your Your Company account
+email.activate.account.hello = Hello {0},
+email.activate.account.html.text = Please follow <a href="{0}">this link</a> to confirm and activate your new account.
+email.activate.account.txt.text = Please follow the link to confirm and activate your new account: {0}

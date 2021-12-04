@@ -1,0 +1,12 @@
+@import play.api.i18n.Messages
+@import play.twirl.api.Html
+
+@(contactTicket: models.ContactTicket)(implicit messages: Messages)
+
+<html>
+<body>
+<p>@messages("email.support.contact.from", contactTicket.firstName.get, contactTicket.lastName.get, contactTicket.roleTitle.get, contactTicket.organization.get)</p>
+<p>@Html(messages("email.support.contact.email", contactTicket.email.get))</p>
+<p>@Html(messages("email.contact.message", contactTicket.message.get))</p>
+</body>
+</html>

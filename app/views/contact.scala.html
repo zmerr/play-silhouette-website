@@ -1,0 +1,36 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import forms.ContactForm.Data
+
+@this()(implicit webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(contactForm: Form[Data])(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
+
+@main(messages("contact.title")) {
+<section id="two" class="wrapper style2 special">
+	<div class="inner narrow">
+		<fieldset >
+			<legend>@messages("contact")</legend>
+			@helper.form(action = controllers.routes.ContactController.submit) {
+				@helper.CSRF.formField
+				@b4.text(contactForm("firstName"), Symbol("_hiddenLabel") -> messages("first.name"), Symbol("placeholder") -> messages("first.name"), Symbol("class") -> "form-control input-lg")
+				@b4.text(contactForm("lastName"), Symbol("_hiddenLabel") -> messages("last.name"), Symbol("placeholder") -> messages("last.name"), Symbol("class") -> "form-control input-lg")
+				@b4.text(contactForm("organization"), Symbol("_hiddenLabel") -> messages("contact.organization"), Symbol("placeholder") -> messages("contact.organization"), Symbol("class") -> "form-control input-lg")
+				@b4.text(contactForm("roleTitle"), Symbol("_hiddenLabel") -> messages("role.title"), Symbol("placeholder") -> messages("role.title"), Symbol("class") -> "form-control input-lg")
+				@b4.text(contactForm("subject"), Symbol("_hiddenLabel") -> messages("contact.subject"), Symbol("placeholder") -> messages("contact.subject"), Symbol("class") -> "form-control input-lg")
+				@b4.text(contactForm("email"), Symbol("_hiddenLabel") -> messages("contact.email"), Symbol("placeholder") -> messages("email"), Symbol("class") -> "form-control input-lg")
+				@b4.textarea(contactForm("message"), Symbol("_hiddenLabel") -> messages("contact.message"), Symbol("placeholder") -> messages("contact.message"), Symbol("class") -> "form-control input-lg", Symbol("rows") -> 7)
+				<div class="form-group">
+					<div>
+						<button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">@messages("send")</button>
+					</div>
+				</div>
+			}
+		</fieldset>
+	</div>
+</section>
+}

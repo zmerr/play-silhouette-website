@@ -1,0 +1,7 @@
+@import play.api.i18n.Messages
+
+@(supportTicket: models.SupportTicket)(implicit messages: Messages)
+
+@messages("email.support.support.from", supportTicket.firstName.get, supportTicket.lastName.get, supportTicket.roleTitle.get, supportTicket.organization.get)
+@messages("email.support.support.email", supportTicket.email.get)
+@messages("email.support.message", supportTicket.message.get)

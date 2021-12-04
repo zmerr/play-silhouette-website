@@ -1,0 +1,17 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import b4.inline.fieldConstructor
+
+@this()(implicit webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(user: models.User)(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
+
+@main(messages("download.title"), Some(user)) {
+<fieldset class="col-md-6 col-md-offset-3">
+    <legend>@messages("download.thank.you")</legend>
+</fieldset>
+}

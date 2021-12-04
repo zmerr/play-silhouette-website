@@ -1,0 +1,24 @@
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import play.api.data._
+@import forms.TotpSetupForm.Data
+@import com.mohiva.play.silhouette.impl.providers.GoogleTotpCredentials
+@import com.mohiva.play.silhouette.impl.providers.GoogleTotpInfo
+
+@this()(implicit webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@()(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{
+b4.vertical.fieldConstructor()
+}
+
+@main("YourCompany") {
+<header class="major">
+    <h1>
+        <a href="@controllers.routes.SignUpController.view" class="button special">Get Started</a>
+    </h1>
+</header>
+
+}

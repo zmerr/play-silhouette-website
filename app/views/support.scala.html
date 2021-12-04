@@ -1,0 +1,37 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import b4.inline.fieldConstructor
+@import forms.SupportForm.Data
+
+@this()(implicit webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(supportForm: Form[Data], user: models.User)(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
+
+@main(messages("support.title"), Some(user)) {
+<section id="two" class="wrapper style2 special">
+    <div class="inner narrow">
+        <fieldset>
+            <legend>@messages("support")</legend>
+            @helper.form(action = controllers.routes.SupportController.submit, Symbol("autocomplete") -> "off") {
+            @helper.CSRF.formField
+            @b4.text(supportForm("subject"), Symbol("_hiddenLabel") -> messages("support.subject"),
+            Symbol("placeholder") -> messages("support.subject"), Symbol("class") -> "form-control input-lg")
+            @b4.textarea(supportForm("message"), Symbol("_hiddenLabel") -> messages("support.message"),
+            Symbol("placeholder") -> messages("support.message"), Symbol("class") -> "form-control input-lg",
+            Symbol("rows") -> 7)
+            <div class="form-group">
+                <div>
+                    <button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">
+                        @messages("send")
+                    </button>
+                </div>
+            </div>
+            }
+        </fieldset>
+    </div>
+</section>
+}

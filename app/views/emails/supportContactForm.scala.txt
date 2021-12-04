@@ -1,0 +1,7 @@
+@import play.api.i18n.Messages
+
+@(contactTicket: models.ContactTicket)(implicit messages: Messages)
+
+@messages("email.support.contact.from", contactTicket.firstName.get, contactTicket.lastName.get, contactTicket.roleTitle.get, contactTicket.organization.get)
+@messages("email.support.contact.email", contactTicket.email.get)
+@messages("email.contact.message", contactTicket.message.get)

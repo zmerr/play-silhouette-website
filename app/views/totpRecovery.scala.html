@@ -1,0 +1,35 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import forms.TotpRecoveryForm.Data
+
+@this()(implicit webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(totpRecoveryForm: Form[Data])(implicit request: RequestHeader, messages: Messages)
+
+    @implicitFieldConstructor = @{
+        b4.vertical.fieldConstructor()
+    }
+
+    @main(messages("sign.in.title")) {
+        <fieldset class="col-md-6 col-md-offset-3">
+            <legend>@messages("sign.in.totp.recovery")</legend>
+            @helper.form(action = controllers.routes.TotpRecoveryController.submit) {
+                @helper.CSRF.formField
+                @b4.text(totpRecoveryForm("recoveryCode"), Symbol("_hiddenLabel") -> messages("totp.recovery.code"), Symbol("placeholder") -> messages("totp.recovery.code"), Symbol("autocomplete") -> "off", Symbol("class") -> "form-control input-lg")
+                @b4.hidden(totpRecoveryForm("userID"))
+                @b4.hidden(totpRecoveryForm("sharedKey"))
+                @b4.hidden(totpRecoveryForm("rememberMe"))
+                <div class="form-group">
+                    <div>
+                        <button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">@messages("totp.verify")</button>
+                    </div>
+                </div>
+            }
+
+            <div>
+                <p class="enter-recovery-code">@messages("totp.lost.your.recovery.codes") <a href="#">@messages("totp.contact.support")</a></p>
+            </div>
+        </fieldset>
+    }

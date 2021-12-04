@@ -1,0 +1,6 @@
+@import play.api.i18n.Messages
+
+@(downloadNotification: models.DownloadNotification)(implicit messages: Messages)
+@messages("email.download.hello", downloadNotification.firstName.get)
+
+@messages("email.download.txt.text")

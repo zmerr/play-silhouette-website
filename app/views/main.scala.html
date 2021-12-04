@@ -1,0 +1,97 @@
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import play.twirl.api.Html
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html.helper._
+
+@(title: String, user: Option[models.User] = None)(content: Html)(implicit request: RequestHeader, messages: Messages, assets: AssetsFinder, webJarsUtil: WebJarsUtil)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+    </head>
+
+
+    <body>
+        <!--header-->
+
+        
+        
+                       <!-- Banner -->
+
+			<section id="banner">
+<!--			<img src="water">-->
+				<ul id="menu">
+
+					 @user.map { u =>
+                                 <li><a href="@controllers.routes.SupportController.view" accesskey="3" title="">@messages("support")</a></li>
+                                 <li><a href="@controllers.routes.DownloadController.view" accesskey="4" title="">@messages("download")</a></li>
+                                  @if(u.loginInfo.providerID == com.mohiva.play.silhouette.impl.providers.CredentialsProvider.ID) {
+                                        <li> <a class="nav-item nav-link" href="@controllers.routes.ChangePasswordController.view">@messages("change.password")</a></li>
+                                  }
+                                 <li>  <a class="nav-item nav-link" href="@controllers.routes.ApplicationController.index">@u.name</a></li>
+                                <li>   <a class="nav-item nav-link" href="@controllers.routes.ApplicationController.signOut">@messages("sign.out")</a></li>
+                    }.getOrElse {
+                    <li class="current_page_item"><a href="@controllers.routes.HomeController.index()" accesskey="1" title="">About</a></li>
+                    <li>  <a  class="nav-item nav-link" href="@controllers.routes.ContactController.view" accesskey="2" title="">@messages("contact")</a></li>
+                    <li>  <a class="nav-item nav-link" href="@controllers.routes.SignInController.view">@messages("sign.in")</a></li>
+                    <li>  <a class="nav-item nav-link" href="@controllers.routes.SignUpController.view">@messages("sign.up")</a></li>
+                    }
+				</ul>
+                <ul id="vertical-menu">
+
+                    @user.map { u =>
+                    <li>  <a class="nav-item nav-link" href="@controllers.routes.ApplicationController.index">@u.name</a></li>
+                    <li><a href="@controllers.routes.DownloadController.view" accesskey="4" title="">@messages("download")</a></li>
+                    <li><a href="@controllers.routes.SupportController.view" accesskey="3" title="">@messages("support")</a></li>
+
+                    @if(u.loginInfo.providerID == com.mohiva.play.silhouette.impl.providers.CredentialsProvider.ID) {
+                    <li> <a class="nav-item nav-link" href="@controllers.routes.ChangePasswordController.view">@messages("change.password")</a></li>
+                    }
+
+                    <li>   <a class="nav-item nav-link" href="@controllers.routes.ApplicationController.signOut">@messages("sign.out")</a></li>
+                    }.getOrElse {
+                    <li class="current_page_item"><a href="@controllers.routes.HomeController.index()" accesskey="1" title="">About</a></li>
+                    <li>  <a  class="nav-item nav-link" href="@controllers.routes.ContactController.view" accesskey="2" title="">@messages("contact")</a></li>
+                    <li>  <a class="nav-item nav-link" href="@controllers.routes.SignInController.view">@messages("sign.in")</a></li>
+                    <li>  <a class="nav-item nav-link" href="@controllers.routes.SignUpController.view">@messages("sign.up")</a></li>
+                    }
+                </ul>
+
+
+
+        </section>
+
+
+        <!--/header-->
+        <main class="container">
+            <div class="starter-template row">
+                @request.flash.get("error").map { msg =>
+                    <div >
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>@messages("error")</strong> @msg
+                    </div>
+                }
+                @request.flash.get("info").map { msg =>
+                    <div >
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>@messages("info")</strong> @msg
+                    </div>
+                }
+                @request.flash.get("success").map { msg =>
+                    <div >
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>@messages("success")</strong> @msg
+                    </div>
+                }
+                @content
+
+            </div>
+        </main>
+
+
+    </body>
+</html>

@@ -1,0 +1,6 @@
+@import play.api.i18n.Messages
+
+@(user: models.User)(implicit messages: Messages)
+
+@messages("email.signup.notify.from", user.firstName.get, user.lastName.get, user.roleTitle.get, user.organization.get)
+@messages("email.signup.notify.email", user.email.get)
